@@ -1,0 +1,24 @@
+{
+  "name": "castle-import",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanCastle/castle-import.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YanCastle/castle-import/issues"
+  },
+  "homepage": "https://github.com/YanCastle/castle-import#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "vue": "^2.5.17",
+    "castle-xlsx": "^1.0.1"
+  }
+}
