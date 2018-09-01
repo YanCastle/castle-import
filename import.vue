@@ -15,7 +15,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(v,k) in data" :key="k">
+                    <tr v-for="(v,k) in data" :key="k" :class="{success:success.indexOf(k)>-1,error:error.indexOf(k)>-1,loading:k==loading}">
                         <td v-for="(o,p) in columns" :key="p">{{v[o.Column]}}</td>
                     </tr>
                 </tbody>
@@ -28,10 +28,11 @@ import { readAsJSON } from "castle-xlsx";
 export default {
   props: {
     class: [Array, String],
-    error: String,
-    success: String,
     data: [Array, Object],
-    columns: [Object]
+    columns: [Object],
+    success: [Array],
+    error: [Array],
+    loading: Number
   },
   data() {
     return {
@@ -77,4 +78,13 @@ export default {
 };
 </script>
 <style scoped>
+.error {
+  background-color: brown;
+}
+.success {
+  background-color: green;
+}
+.loading {
+  background-color: yellow;
+}
 </style>
